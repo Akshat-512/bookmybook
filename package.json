@@ -1,0 +1,49 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "MERN Final Project",
+  "engines": {
+    "node": "14.16.1",
+    "npm": "6.14.12"
+  },
+  "main": "server.js",
+  "proxy": "http://localhost:3001",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaredP17/final-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaredP17/final-project/issues"
+  },
+  "homepage": "https://github.com/JaredP17/final-project#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "bulma": "^0.9.3",
+    "crypto": "^1.0.1",
+    "express": "^4.17.3",
+    "if-env": "^1.0.4",
+    "js": "^0.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
+    "mongoose": "^5.13.14",
+    "node-sass": "^7.0.1",
+    "prop-types": "^15.8.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
