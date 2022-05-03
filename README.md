@@ -1,4 +1,4 @@
-# The Borrowers
+# Book-my-Book
 ## Description 
 Have extra books lying around and want some new material? Our site allows you to post your books and borrow from your local neighbors! You post your books and are able to search through books posted in your area. You then create a social contract with the other user swapping books. Once communication begins you’re ready to enjoy your new books after pick up!
 
